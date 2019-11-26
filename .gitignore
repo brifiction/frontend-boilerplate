@@ -90,3 +90,4 @@ typings/
 # Ignore built files
 /build/images/*
 /build/css/*
+/build/vendor/*
