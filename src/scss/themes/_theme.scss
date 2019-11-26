@@ -1,14 +1,16 @@
 // Base
-@import "../base/_global.scss";
-@import "../base/_icons.scss";
-@import "../base/_mixins.scss";
-@import "../base/_variables.scss";
+@import "../base/_variables";
+@import "../base/_mixins";
+@import "../base/_globals";
+
 // Layouts
-@import "../layouts/_masthead.scss";
-@import "../layouts/_footer.scss";
+@import "../layouts/_masthead";
+@import "../layouts/_footer";
+
 // Modules / Components
-@import "../modules/_cta.scss";
-@import "../modules/_showcase.scss";
-@import "../modules/_testimonials.scss";
+@import "../modules/_icons";
+@import "../modules/_cta";
+@import "../modules/_showcase";
+@import "../modules/_testimonials";
 
 

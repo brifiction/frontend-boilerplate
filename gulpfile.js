@@ -48,6 +48,7 @@
             .pipe(gulp.dest(imgConfig.build));
 
     }
+    
     exports.images = images;
 
     /**************** CSS task ****************/
