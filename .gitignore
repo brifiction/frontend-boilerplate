@@ -86,3 +86,7 @@ typings/
 
 # DynamoDB Local files
 .dynamodb/
+
+# Ignore built files
+/build/images/*
+/build/css/*
