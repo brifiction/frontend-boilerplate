@@ -35,5 +35,8 @@
     "gulp-sourcemaps": "^2.6.5",
     "postcss-assets": "^5.0.0",
     "usedcss": "^1.0.7"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7"
   }
 }
