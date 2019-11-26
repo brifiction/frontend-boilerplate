@@ -1,0 +1,25 @@
+{
+  "name": "frontend-boilerplate",
+  "version": "1.0.0",
+  "description": "a front-end project boilerplate, using gulp + sass for building SMACSS projects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brifiction/frontend-boilerplate.git"
+  },
+  "keywords": [
+    "boilerplate",
+    "gulp",
+    "sass",
+    "smacss"
+  ],
+  "author": "brian ng",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brifiction/frontend-boilerplate/issues"
+  },
+  "homepage": "https://github.com/brifiction/frontend-boilerplate#readme"
+}
