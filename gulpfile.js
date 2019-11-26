@@ -28,7 +28,7 @@
 
     console.log('Gulp', devBuild ? 'development' : 'production', 'build');
 
-    /**************** images task ****************/
+    /**************** Images task ****************/
     const imgConfig = {
         src: dir.src + 'images/**/*',
         build: dir.build + 'images/',
@@ -49,6 +49,54 @@
 
     }
     exports.images = images;
+
+    /**************** CSS task ****************/
+    const cssConfig = {
+
+        src: dir.src + 'scss/main.scss',
+        watch: dir.src + 'scss/**/*',
+        build: dir.build + 'css/',
+        sassOpts: {
+            sourceMap: devBuild,
+            imagePath: '/images/',
+            precision: 3,
+            errLogToConsole: true
+        },
+
+        postCSS: [
+            require('usedcss')({
+                html: ['index.html']
+            }),
+            require('postcss-assets')({
+                loadPaths: ['images/'],
+                basePath: dir.build
+            }),
+            require('autoprefixer')({
+                browsers: ['> 1%']
+            }),
+            require('cssnano')
+        ]
+
+    };
+
+    function css() {
+
+        return gulp.src(cssConfig.src)
+            .pipe(sourcemaps ? sourcemaps.init() : noop())
+            .pipe(sass(cssConfig.sassOpts).on('error', sass.logError))
+            .pipe(postcss(cssConfig.postCSS))
+            .pipe(sourcemaps ? sourcemaps.write() : noop())
+            .pipe(size({
+                showFiles: true
+            }))
+            .pipe(gulp.dest(cssConfig.build))
+            .pipe(browsersync ? browsersync.reload({
+                stream: true
+            }) : noop());
+
+    }
+    exports.css = gulp.series(images, css);
+
 
 
 })();
