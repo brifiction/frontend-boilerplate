@@ -1,0 +1,9 @@
+// Import
+@import "~bootstrap/scss/bootstrap.scss";
+// TODO provide solution to load font path instead of referencing ../fonts/.. in scss files.
+// @import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+// @import "~simple-line-icons/scss/simple-line-icons.scss";
+
+// Landing page theme
+@import './themes/theme';
+
