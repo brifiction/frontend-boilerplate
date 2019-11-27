@@ -34,8 +34,6 @@ jobs:
       # execute npm install
       - run: npm install
 
-      - run: npm i gulp-cli -g
-
       - save_cache:
           paths:
             - node_modules
