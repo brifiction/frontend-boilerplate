@@ -4,7 +4,9 @@
   "description": "a front-end project boilerplate, using gulp + sass for building SMACSS projects.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp",
+    "gulp-css": "gulp css"
   },
   "repository": {
     "type": "git",
