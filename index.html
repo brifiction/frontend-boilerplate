@@ -1,22 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Landing Page - Start Bootstrap Theme</title>
+    <meta name="author" content="brian ng">
+    <title>Landing Page Theme - Boilerplate Template</title>
+    <!-- Custom fonts for this template -->
+    <link href="./build/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="./build/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
     <!-- Custom styles for this template -->
     <link href="./build/css/main.css" rel="stylesheet">
+
 </head>
 
 <body>
-
-    <!-- Navigation -->
     <nav class="navbar navbar-light bg-light static-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">Start Bootstrap</a>
-            <a class="btn btn-primary" href="#">Sign In</a>
+        
+        <a class="navbar-brand" href="#">Entwurfhaus</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Dropdown link
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </li>
+            </ul>
         </div>
     </nav>
 
@@ -86,7 +120,7 @@
             <div class="row no-gutters">
 
                 <div class="col-lg-6 order-lg-2 text-white showcase-img"
-                    style="background-image: url('/build/images/bg-showcase-1.jpg');"></div>
+                    style="background-image: url('/build/images/placeholders/bg-showcase-1.jpg');"></div>
                 <div class="col-lg-6 order-lg-1 my-auto showcase-text">
                     <h2>Fully Responsive Design</h2>
                     <p class="lead mb-0">When you use a theme created by Start Bootstrap, you know that the theme will
@@ -95,7 +129,8 @@
                 </div>
             </div>
             <div class="row no-gutters">
-                <div class="col-lg-6 text-white showcase-img" style="background-image: url('/build/images/bg-showcase-2.jpg');">
+                <div class="col-lg-6 text-white showcase-img"
+                    style="background-image: url('/build/images/placeholders/bg-showcase-2.jpg');">
                 </div>
                 <div class="col-lg-6 my-auto showcase-text">
                     <h2>Updated For Bootstrap 4</h2>
@@ -106,7 +141,7 @@
             </div>
             <div class="row no-gutters">
                 <div class="col-lg-6 order-lg-2 text-white showcase-img"
-                    style="background-image: url('/build/images/bg-showcase-3.jpg');"></div>
+                    style="background-image: url('/build/images/placeholders/bg-showcase-3.jpg');"></div>
                 <div class="col-lg-6 order-lg-1 my-auto showcase-text">
                     <h2>Easy to Use &amp; Customize</h2>
                     <p class="lead mb-0">Landing Page is just HTML and CSS with a splash of SCSS for users who demand
@@ -124,14 +159,16 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                        <img class="img-fluid rounded-circle mb-3" src="/build/images/"testimonials-1.jpg" alt="">
+                        <img class="img-fluid rounded-circle mb-3" src="/build/images/placeholders/testimonials-1.jpg"
+                            alt="">
                         <h5>Margaret E.</h5>
                         <p class="font-weight-light mb-0">"This is fantastic! Thanks so much guys!"</p>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                        <img class="img-fluid rounded-circle mb-3" src="/build/images/"testimonials-2.jpg" alt="">
+                        <img class="img-fluid rounded-circle mb-3" src="/build/images/placeholders/testimonials-2.jpg"
+                            alt="">
                         <h5>Fred S.</h5>
                         <p class="font-weight-light mb-0">"Bootstrap is amazing. I've been using it to create lots of
                             super nice landing pages."</p>
@@ -139,7 +176,8 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                        <img class="img-fluid rounded-circle mb-3" src="/build/images/"testimonials-3.jpg" alt="">
+                        <img class="img-fluid rounded-circle mb-3" src="/build/images/placeholders/testimonials-3.jpg"
+                            alt="">
                         <h5>Sarah W.</h5>
                         <p class="font-weight-light mb-0">"Thanks so much for making these free resources available to
                             us!"</p>
@@ -196,7 +234,7 @@
                             <a href="#">Privacy Policy</a>
                         </li>
                     </ul>
-                    <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2019. All Rights Reserved.</p>
+                    <p class="text-muted small mb-4 mb-lg-0">&copy; Entwurfhaus 2019. All Rights Reserved.</p>
                 </div>
                 <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
                     <ul class="list-inline mb-0">
@@ -222,8 +260,8 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="build/vendor/jquery/jquery.min.js"></script>
+    <script src="build/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
