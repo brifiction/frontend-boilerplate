@@ -1,4 +1,7 @@
-# Gulp + SASS Front-End Boilerplate
+# Gulp + SASS Front-End Boilerplate 
+
+[![CircleCI](https://circleci.com/gh/brifiction/frontend-boilerplate/tree/master.svg?style=svg)](https://circleci.com/gh/brifiction/frontend-boilerplate/tree/master)
+[![CircleCI](https://circleci.com/gh/brifiction/frontend-boilerplate/tree/develop.svg?style=svg)](https://circleci.com/gh/brifiction/frontend-boilerplate/tree/develop)
 
 A boilerplate for building web projects with [Gulp](https://gulpjs.com/).
 
