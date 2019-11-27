@@ -32,7 +32,7 @@ jobs:
             - v1-dependencies-
 
       # execute npm install
-      - run: npm install
+      - run: yarn install
 
       - save_cache:
           paths:
@@ -40,4 +40,4 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: npm run gulp-css
+      - run: yarn run gulp css
