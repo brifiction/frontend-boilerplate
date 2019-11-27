@@ -4,7 +4,7 @@
 @import "../base/_globals";
 
 // Layouts
-@import "../layouts/_masthead";
+@import "../layouts/_header";
 @import "../layouts/_footer";
 
 // Modules / Components
@@ -13,4 +13,5 @@
 @import "../modules/_showcase";
 @import "../modules/_testimonials";
 
-
+// Themes
+@import "../themes/_typography";
