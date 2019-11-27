@@ -33,6 +33,7 @@ jobs:
 
       # execute npm install
       - run: npm install
+      - run: npm install -g gulp
       - run: npm install -g gulp-cli
 
       - save_cache:
