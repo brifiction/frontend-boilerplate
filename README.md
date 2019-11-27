@@ -35,7 +35,7 @@ Put your [Sass](https://sass-lang.com/) files in the `src/sass` directory.
 
 Gulp generates minified and unminified CSS files. It also includes [autoprefixer](https://github.com/postcss/autoprefixer), which adds vendor prefixes for you.
 
-# Scalable and Modular Architecture (SMACSS)
+## Scalable and Modular Architecture (SMACSS)
 
 SMACSS methodology is ideal, for your design development and processes. This is to maintain best practices for design development with SASS.
 
@@ -80,3 +80,9 @@ For more information, [click here](http://smacss.com/).
 +-- README.md
 +-- renovate.json
 ```
+
+## Project Roadmap
+
+1. Include JS files, as a part of task build process - [BEM methodology](https://en.bem.info/methodology/js/).
+1. Reconfigure the build for importing vendor files, font-awesome and simple-line-icons. However, optional to keep hence please discard them if not required to use.
+1. Add plugins for further productivity efficiency, such as lint, testing and similar. 
