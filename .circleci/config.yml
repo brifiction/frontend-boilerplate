@@ -17,9 +17,9 @@ jobs:
     working_directory: ~/frontend-boilerplate
 
     branches:
-      only:
-        - develop
-      #  - /rc-.*/ # regex expression matching with rc- prefix
+      ignore:
+        - master
+        - /renovate/ # regex expression matching with rc- prefix
 
     steps:
       - checkout
@@ -33,6 +33,7 @@ jobs:
 
       # execute npm install
       - run: npm install
+      - run: npm install -g gulp-cli
 
       - save_cache:
           paths:
@@ -40,4 +41,4 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      # - run: gulp css
+      - run: gulp css
