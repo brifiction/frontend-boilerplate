@@ -16,6 +16,11 @@ jobs:
 
     working_directory: ~/
 
+    branches:
+      only:
+        - develop
+      #  - /rc-.*/ # regex expression matching with rc- prefix
+
     steps:
       - checkout
 
