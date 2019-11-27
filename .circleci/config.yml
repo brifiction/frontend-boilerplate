@@ -18,7 +18,6 @@ jobs:
 
     branches:
       ignore:
-        - master
         - /renovate/* # regex expression matching with rc- prefix
 
     steps:
