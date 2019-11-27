@@ -24,7 +24,9 @@
         sass = require('gulp-sass'),
         postcss = require('gulp-postcss'),
         sourcemaps = devBuild ? require('gulp-sourcemaps') : null,
-        browsersync = devBuild ? require('browser-sync').create() : null;
+        browsersync = devBuild ? require('browser-sync').create() : null,
+        del = require("del"),
+        merge = require("merge-stream");
 
     console.log('Gulp', devBuild ? 'development' : 'production', 'build');
 
@@ -48,7 +50,7 @@
             .pipe(gulp.dest(imgConfig.build));
 
     }
-    
+
     exports.images = images;
 
     /**************** CSS task ****************/
@@ -96,8 +98,79 @@
             }) : noop());
 
     }
-    exports.css = gulp.series(images, css);
 
+    // Clean vendor
+    function clean() {
+        return del(["./build/vendor/"]);
+    }
 
+    // Bring third party dependencies from node_modules into vendor directory
+    function modules() {
+        // Bootstrap
+        var bootstrap = gulp.src('./node_modules/bootstrap/dist/**/*')
+            .pipe(gulp.dest('./build/vendor/bootstrap'));
+        // Font Awesome CSS
+        var fontAwesomeCSS = gulp.src('./node_modules/@fortawesome/fontawesome-free/css/**/*')
+            .pipe(gulp.dest('./build/vendor/fontawesome-free/css'));
+        // Font Awesome Webfonts
+        var fontAwesomeWebfonts = gulp.src('./node_modules/@fortawesome/fontawesome-free/webfonts/**/*')
+            .pipe(gulp.dest('./build/vendor/fontawesome-free/webfonts'));
+        // jQuery
+        var jquery = gulp.src([
+                './node_modules/jquery/dist/*',
+                '!./node_modules/jquery/dist/core.js'
+            ])
+            .pipe(gulp.dest('./build/vendor/jquery'));
+        // Simple Line Icons
+        var simpleLineIconsFonts = gulp.src('./node_modules/simple-line-icons/fonts/**')
+            .pipe(gulp.dest('./build/vendor/simple-line-icons/fonts'));
+        var simpleLineIconsCSS = gulp.src('./node_modules/simple-line-icons/css/**')
+            .pipe(gulp.dest('./build/vendor/simple-line-icons/css'));
+        return merge(bootstrap, fontAwesomeCSS, fontAwesomeWebfonts, jquery, simpleLineIconsFonts, simpleLineIconsCSS);
+    }
+
+    const vendor = gulp.series(clean, modules);
+
+    exports.css = gulp.series(images, vendor, css);
+
+    /**************** Server task (private) ****************/
+    const syncConfig = {
+        server: {
+            baseDir: './',
+            index: 'index.html'
+        },
+        port: 8000,
+        open: false
+    };
+
+    // browser-sync
+    function server(done) {
+        if (browsersync) browsersync.init(syncConfig);
+        done();
+    }
+
+    // browser-sync reload
+    function browserSyncReload(done) {
+        browsersync.reload();
+        done();
+    }
+
+    /**************** watch task ****************/
+    function watch(done) {
+
+        // image changes
+        gulp.watch(imgConfig.src, images);
+
+        // CSS changes
+        gulp.watch(cssConfig.watch, css);
+
+        gulp.watch("./index.html", browserSyncReload);
+
+        done();
+
+    }
+
+    /**************** Default task ****************/
+    exports.default = gulp.series(exports.css, watch, server);
 
 })();
