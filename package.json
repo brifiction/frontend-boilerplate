@@ -39,7 +39,7 @@
     "usedcss": "^1.0.7",
     "@fortawesome/fontawesome-free": "5.11.2",
     "bootstrap": "4.4.0",
-    "jquery": "3.4.1",
+    "jquery": "3.5.0",
     "simple-line-icons": "^2.4.1"
   },
   "devDependencies": {
