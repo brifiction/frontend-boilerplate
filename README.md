@@ -25,6 +25,8 @@ Pre-requisites:
 
 **Try it out.** After installing, run `gulp` to compile some test files into the `build` directory. Or, run `gulp` and make some changes to see them recompile automatically with the help of ``browser-sync``.
 
+> For example, http://localhost:8000 (but varies based on gulpfile.js browser-sync configurations)
+
 ## Documentation
 
 Add your source files to the appropriate `src` subdirectories. Gulp will process and and compile them into `dist`.
@@ -83,9 +85,3 @@ For more information, [click here](http://smacss.com/).
 +-- README.md
 +-- renovate.json
 ```
-
-## Project Roadmap
-
-1. Include JS files, as a part of task build process - [BEM methodology](https://en.bem.info/methodology/js/).
-1. Reconfigure the build for importing vendor files, font-awesome and simple-line-icons. However, optional to keep hence please discard them if not required to use.
-1. Add plugins for further productivity efficiency, such as lint, testing and similar. 

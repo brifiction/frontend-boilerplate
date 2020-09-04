@@ -23,26 +23,26 @@
   },
   "homepage": "https://github.com/brifiction/frontend-boilerplate#readme",
   "dependencies": {
-    "autoprefixer": "^9.7.2",
+    "@fortawesome/fontawesome-free": "5.11.2",
+    "autoprefixer": "^9.8.6",
+    "bootstrap": "4.4.0",
     "cssnano": "^4.1.10",
+    "del": "^5.1.0",
     "gulp": "^4.0.2",
     "gulp-imagemin": "^6.2.0",
     "gulp-newer": "^1.4.0",
-    "gulp-noop": "^1.0.0",
+    "gulp-noop": "^1.0.1",
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-size": "^3.0.0",
     "gulp-sourcemaps": "^2.6.5",
-    "del": "^5.1.0",
+    "jquery": "^3.5.1",
     "merge-stream": "^2.0.0",
     "postcss-assets": "^5.0.0",
-    "usedcss": "^1.0.7",
-    "@fortawesome/fontawesome-free": "5.11.2",
-    "bootstrap": "4.4.0",
-    "jquery": "3.4.1",
-    "simple-line-icons": "^2.4.1"
+    "simple-line-icons": "^2.5.5",
+    "usedcss": "^1.0.7"
   },
   "devDependencies": {
-    "browser-sync": "2.26.7"
+    "browser-sync": "^2.26.12"
   }
 }
